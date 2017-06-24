@@ -112,21 +112,6 @@ input.nav4{
         opacity:1;
     }
 }
-#nav1:checked ~ .scroll{
-     transform: translateY(0%);
- }
-#nav2:checked ~ .scroll{
-    transform: translateY(-100%);
-}
-#nav3:checked ~ .scroll{
-    transform: translateY(-200%);
-}
-#nav4:checked ~ .scroll{
-    transform: translateY(-300%);
-}
-#nav5:checked ~ .scroll{
-    transform: translateY(-400%);
-}
 .rightDiv{
     position: absolute;
     font-family: 'comic','Microsoft YaHei',Times New Roman,Helvetica,Arial;
@@ -165,9 +150,6 @@ input.nav4{
 }
 .scroll .panel h1{
     font-size:60px;
-}
-@media screen and (max-device-width: 520px){
-
 }
 .container{
     max-width: 100%;
@@ -314,18 +296,6 @@ input.nav4{
 .wrap .workTime{
 float: right;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 .nav .right_nav{
     position: absolute;
     width: 20px;
@@ -342,19 +312,6 @@ float: right;
     margin-top: 5px;
 
 }
-/*.nav .right_nav input::after{
-    content: '';
-    display: block;
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    background-color: blue;
-    z-index: 999;
-}*/
-
 /*动画*/
 .nav1:checked ~ .scroll{
      -webkit-transform: translateY(0%);
@@ -390,4 +347,15 @@ float: right;
     -ms-transform: translateY(-400%);
     -o-transform: translateY(-400%);
     transform: translateY(-400%);
+}
+@media screen and (max-device-width: 768px){
+    div.wrap.pageSkill:after,div.wrap.homepage:after{
+        width: 0;
+    }
+    .nav input{
+        position: fixed;
+    }
+    input.nav1:after,input.nav2:after,input.nav3:after,input.nav4:after{
+        background-color: #6e6e6e;
+    }
 }
