@@ -1,0 +1,393 @@
+*{
+    margin:0;
+    padding:0;
+}
+@font-face{
+font-family: 'comic';
+src: url('../font/comic sans ms.ttf');
+}
+body{
+    font-family:'Microsoft YaHei',Times New Roman,Helvetica,Arial;
+    background:#ddd;
+    font-size:15px;
+    color:#333;
+    /*去掉滚动条*/
+    overflow: hidden;
+}
+a{
+    text-decoration:none;
+    color:#555;
+}
+.nav{
+    width:100%;
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+.nav input,.nav a{
+    width:20px;
+    height:20px;
+    line-height:34px;
+    position:absolute;
+    right:3%;
+    top: 50%;
+    margin-right: 15px;
+    cursor:pointer;
+}
+.nav input{
+    visibility: hidden;
+    z-index:1000;
+     transition:all 0.4s ease-in-out;
+}
+.nav input::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    visibility: visible;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+input.nav1:after{
+     background-color: #cccccc;
+}
+input.nav2:after{
+     background-color: #aaaaaa;
+}
+input.nav3:after{
+    background-color: #8f8f8f;
+}
+input.nav4:after{
+   background-color: #6e6e6e;
+}
+input.nav1{
+     margin-top: -70px; 
+}
+input.nav2{
+     margin-top: -35px; 
+}
+input.nav3{
+    margin-top: 0; 
+}
+input.nav4{
+   margin-top: 35px; 
+}
+.nav input:checked::after{
+  transform:scale(1.2);
+ 
+}
+.nav input:hover{
+     transform:scale(1.1);
+}
+.scroll,.panel{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+.scroll{
+    left:0;
+    top:0;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: all 0.6s ease-in-out;
+    color:#e23a6e;
+    /*font-weight:bold;*/
+}
+.panel{
+    background:#fff;
+    overflow: hidden;
+}
+/*动画*/
+.nav4:checked ~ .scroll #panel4 .noBgc{
+    animation: moveDown 0.6s ease-in-out 0.4s backwards;
+}
+@keyframes moveDown {
+    0%{
+        transform: translateY(-60px);
+        opacity:0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity:1;
+    }
+}
+#nav1:checked ~ .scroll{
+     transform: translateY(0%);
+ }
+#nav2:checked ~ .scroll{
+    transform: translateY(-100%);
+}
+#nav3:checked ~ .scroll{
+    transform: translateY(-200%);
+}
+#nav4:checked ~ .scroll{
+    transform: translateY(-300%);
+}
+#nav5:checked ~ .scroll{
+    transform: translateY(-400%);
+}
+.rightDiv{
+    position: absolute;
+    font-family: 'comic';
+    left: 70%;
+    top: 70px;
+    font-size: 20px;
+    width: 20%;
+}
+.wrap .rightDiv p{
+    color: #5da2cb;
+    text-align: center;
+    line-height: 40px;
+}
+.wrap .rightDiv p:first-of-type{
+    text-align: left;
+}
+.wrap .rightDiv p:last-of-type{
+    text-align: right;
+}
+.wrap .rightDiv p span{
+    color: #fff;
+    display: inline-block;
+    transform:rotate(-4deg);
+    background-color: #5da2cb;;
+}
+.panelColor{
+    background:#fa96b5;
+    color:#fff;
+}
+.panelColor .icon{
+    background:#fff;
+    color:#fa96b5;
+}
+.panelColor .icon:after{
+    color:#fa96b5;
+}
+.scroll .panel h1{
+    font-size:60px;
+}
+@media screen and (max-device-width: 520px){
+
+}
+.container{
+    max-width: 100%;
+    min-width: 768px;
+}
+.panel{
+    background-color: #F6F6F6;
+}
+.scroll .wrap.homepage{
+    background-color: #cccccc;
+}
+.scroll .wrap{
+    margin: 20px;
+    height:100%;
+    position: relative;
+    background-color: #fff;
+}
+.scroll .index > div{
+    display: table-cell;
+    width: 50%;
+
+}
+.textNote{
+    vertical-align: top;
+}
+.pic{
+    text-align: right;
+}
+.pic img{
+    max-width: 75%;
+    height: auto;
+}
+.scroll .wrap{
+    vertical-align: top;
+}
+.scroll .wrap::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 7%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 2px 0 5px #cccccc;
+}
+.scroll .pageSkill{
+    background-color: #eeeeee;
+}
+.scroll .pageSkill li{
+    margin-left:20px;
+    color: #8c8c8c;
+    margin:25px 0;
+    line-height: 25px;
+}
+.scroll .wrap.pageSkill ul{
+    width: 70%;
+}
+.scroll .wrap.pageSkill h2{
+    text-align: left;
+}
+.scroll .contact p{
+    text-align: center;
+    line-height: 35px;
+
+}
+.scroll .contact p:first-of-type{
+    margin-top: 80px;
+}
+.scroll .wrap .noBgc{
+    margin:0 auto;
+    padding: 35px;
+    width: 70%;
+    height: auto;
+    text-align: left;
+}
+.scroll .wrap .index{
+    margin:0 auto;
+    display: table;
+    padding: 35px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    margin-top: -150px;
+    background-color: #fff;
+    width: 70%;
+    height: auto;
+    text-align: left;
+}
+.scroll .wrap .index .titleW{
+    color: #8c8c8c;
+    margin-bottom: 30px;
+}
+.scroll .wrap .index .textW{
+    text-indent: 2rem;
+    color: #adadad;
+    line-height: 20px;
+}
+.scroll .wrap h2{
+    color: #423F3E;
+    font-size: 1rem;
+    height: 35px;
+    font-weight: 500;
+    text-align: center; 
+    position: relative; 
+    z-index: 10;
+}
+.scroll .wrap h2::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 30%;
+    left:0%;
+    z-index: -9;
+    height: 1px;
+    width: 100%;
+    background-color: #eeeeee;
+}
+.scroll .wrap h2 span{
+    border-radius: 10px;
+    padding: 5px 8px;
+    background-color: #eeeeee;
+}
+.wrap .baseInfo{
+    margin:20px 0 20px 20px;
+    color: #8c8c8c;
+    width: 100%;
+}
+.wrap .baseInfo p{
+    line-height: 20px;
+}
+.wrap .baseInfo > div{
+    display: inline-block;  
+    width: 50%;
+}
+.wrap h3{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #adadad;
+}
+.wrap p{
+    color: #adadad;
+}
+.wrap .workTime{
+float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.nav .right_nav{
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    right: 2%;
+    margin-right:20px;
+}
+.nav .right_nav input{
+    position: relative;
+    z-index: 1000;
+    line-height: 30px;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+
+}
+/*.nav .right_nav input::after{
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: blue;
+    z-index: 999;
+}*/
+
+/*动画*/
+.nav1:checked ~ .scroll{
+     -webkit-transform: translateY(0%);
+     -moz-transform: translateY(0%);
+     -ms-transform: translateY(0%);
+     -o-transform: translateY(0%);
+     transform: translateY(0%);
+ }
+.nav2:checked ~ .scroll{
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+.nav3:checked ~ .scroll{
+    -webkit-transform: translateY(-200%);
+    -moz-transform: translateY(-200%);
+    -ms-transform: translateY(-200%);
+    -o-transform: translateY(-200%);
+    transform: translateY(-200%);
+}
+.nav4:checked ~ .scroll{
+    -webkit-transform: translateY(-300%);
+    -moz-transform: translateY(-300%);
+    -ms-transform: translateY(-300%);
+    -o-transform: translateY(-300%);
+    transform: translateY(-300%);
+}
+.nav5:checked ~ .scroll{
+    -webkit-transform: translateY(-400%);
+    -moz-transform: translateY(-400%);
+    -ms-transform: translateY(-400%);
+    -o-transform: translateY(-400%);
+    transform: translateY(-400%);
+}
