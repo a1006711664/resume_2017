@@ -129,7 +129,7 @@ input.nav4{
 }
 .rightDiv{
     position: absolute;
-    font-family: 'comic';
+    font-family: 'comic','Microsoft YaHei',Times New Roman,Helvetica,Arial;
     left: 70%;
     top: 70px;
     /*font-size: 20px;*/
