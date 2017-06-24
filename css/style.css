@@ -348,7 +348,7 @@ float: right;
     -o-transform: translateY(-400%);
     transform: translateY(-400%);
 }
-@media screen and (max-device-width: 768px){
+@media screen and (max-device-width: 800px){
     div.wrap.pageSkill:after,div.wrap.homepage:after{
         width: 0;
     }
