@@ -132,7 +132,7 @@ input.nav4{
     font-family: 'comic';
     left: 70%;
     top: 70px;
-    font-size: 20px;
+    /*font-size: 20px;*/
     width: 20%;
 }
 .wrap .rightDiv p{
