@@ -23,6 +23,7 @@ a{
     position:absolute;
     left:0;
     bottom:0;
+    overflow: hidden;
 }
 .nav input,.nav a{
     width:20px;
