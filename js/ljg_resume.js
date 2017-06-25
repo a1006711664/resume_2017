@@ -2,6 +2,13 @@
         var scroll=document.getElementsByClassName("scroll")[0];
         var panel=document.getElementsByClassName("panel");
         var wrap=document.getElementsByClassName("wrap");
+        var noSlip=document.getElementsByTagName('body')[0];
+        noSlip.ontouchmove=touchMove;
+        console.log(window.ontouchmove)
+        var touchMove = function(e){
+            console.log(e);
+            e.preventDefault();
+        };
 
         var clientH=window.innerHeight;
         console.log(clientH)
