@@ -349,7 +349,7 @@ float: right;
     -o-transform: translateY(-400%);
     transform: translateY(-400%);
 }
-@media screen and (max-device-width: 800px){
+/*@media screen and (max-device-width: 800px){
     div.wrap.pageSkill:after,div.wrap.homepage:after{
         width: 0;
     }
@@ -359,4 +359,4 @@ float: right;
     input.nav1:after,input.nav2:after,input.nav3:after,input.nav4:after{
         background-color: #6e6e6e;
     }
-}
+}*/
