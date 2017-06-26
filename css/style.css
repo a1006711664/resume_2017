@@ -61,6 +61,9 @@ input.nav3:after{
 input.nav4:after{
    background-color: #6e6e6e;
 }
+input.nav5:after{
+   background-color: #535353;
+}
 input.nav1{
      margin-top: -70px; 
 }
@@ -72,6 +75,9 @@ input.nav3{
 }
 input.nav4{
    margin-top: 35px; 
+}
+input.nav5{
+   margin-top: 70px; 
 }
 .nav input:checked::after{
   transform:scale(1.2);
@@ -100,7 +106,7 @@ input.nav4{
     overflow: hidden;
 }
 /*动画*/
-.nav4:checked ~ .scroll #panel4 .noBgc{
+.nav5:checked ~ .scroll #panel5 .noBgc{
     animation: moveDown 0.6s ease-in-out 0.4s backwards;
 }
 @keyframes moveDown {
@@ -312,6 +318,36 @@ float: right;
     height: 20px;
     margin-top: 5px;
 
+}
+body .scoll .wrap .reels{
+    text-align: center;
+}
+.wrap .reels > div{
+    width: 40%;
+    min-height: 120px;
+    vertical-align: top;
+    background-color: #F6F6F6;
+    display: inline-block;
+    padding: 15px 5px 5px 30px;
+
+}
+.wrap .reels div h3{
+    text-align: center;
+}
+.wrap .reels div p,.wrap .reels div h3{
+color:#848484;
+position: relative;
+}
+.wrap .reels .iconLink{
+    line-height: 30px;
+    padding: 8px;
+}
+.wrap .reels a{
+    display: inline;
+    position: relative;
+}
+.wrap .reels div +div{
+    margin-left: 5%;
 }
 /*动画*/
 .nav1:checked ~ .scroll{

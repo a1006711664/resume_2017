@@ -3,6 +3,7 @@
         var panel=document.getElementsByClassName("panel");
         var wrap=document.getElementsByClassName("wrap");
         var noSlip=document.getElementsByTagName('body')[0];
+        var ifWheel=true;
         noSlip.ontouchmove=touchMove;
         console.log(window.ontouchmove)
         var touchMove = function(e){
@@ -21,6 +22,11 @@
         var input_radio=document.getElementsByTagName("input");
         console.log(input_radio)
         var wheel= function (event) {
+            if (!ifWheel) {return};
+            ifWheel=false;
+            var delay = setTimeout(function(){
+               ifWheel=true; 
+           },600);
             console.log(event.type)
             var direct=0;
             event=event||window.event;
@@ -33,6 +39,7 @@
                 event.preventDefault();
             event.returnValue=false;
         };
+
         window.onmousewheel=wheel;
     };
 
@@ -48,7 +55,7 @@
         if(direct>0 && num>0){
             num--;  
             arr[num].checked=true;
-        }else if(direct<0 && num<3){
+        }else if(direct<0 && num<4){
             num++;
             arr[num].checked=true;
         }
